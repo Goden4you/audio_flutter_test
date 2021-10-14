@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:test/providers/tags_provider.dart';
+import 'package:test/constants/constants.dart';
+import 'package:test/ui/widgets/audio_container.dart';
 import 'package:test/ui/widgets/tags_container.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -30,10 +30,21 @@ class HomeScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 16, bottom: 24),
                       child: Text(
                         'Здесь хранятся запасы Витаминов',
-                        style: Theme.of(context).textTheme.headline2,
+                        style: Theme.of(context).textTheme.headline3,
                       ),
                     ),
                     const SizedBox(height: 50, child: TagsContainer()),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 24, bottom: 16),
+                      child: Text(
+                        'Новые',
+                        style: Theme.of(context).textTheme.headline2,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: AUDIO_IMAGE_WIDTH,
+                      child: AudioContainer(),
+                    )
                   ],
                 ),
               ),

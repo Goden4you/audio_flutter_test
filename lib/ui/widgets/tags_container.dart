@@ -46,7 +46,7 @@ class TagsContainerState extends ConsumerState<TagsContainer> {
                                       'Все',
                                       style: Theme.of(context)
                                           .textTheme
-                                          .headline2
+                                          .headline3
                                           ?.copyWith(
                                               color: selectedTag == ALL_TAGS_ID
                                                   ? Theme.of(context)
@@ -72,7 +72,7 @@ class TagsContainerState extends ConsumerState<TagsContainer> {
                                   result[index].name.toString(),
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline2
+                                      .headline3
                                       ?.copyWith(
                                           color: selectedTag ==
                                                   result[index].id.toString()
@@ -92,6 +92,6 @@ class TagsContainerState extends ConsumerState<TagsContainer> {
   @override
   void initState() {
     super.initState();
-    ref.read(tagsNotifierProvider.notifier).getTagsData();
+    ref.read(tagsProvider.notifier).getTags();
   }
 }

@@ -11,4 +11,5 @@ class ApiEndpoint {
 
 class ApiEndpoints {
   static const tags = ApiEndpoint("/tags");
+  static const audio = ApiEndpoint("/");
 }
