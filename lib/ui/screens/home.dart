@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test/constants/constants.dart';
 import 'package:test/ui/widgets/audio_container.dart';
+import 'package:test/ui/widgets/player_container.dart';
 import 'package:test/ui/widgets/tags_container.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -48,12 +49,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Positioned(
-                  bottom: 0,
-                  child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: 200,
-                      color: const Color.fromRGBO(0, 0, 0, 0.7)))
+              const Positioned(bottom: 0, child: PlayerContainer())
             ],
           ),
         ));
